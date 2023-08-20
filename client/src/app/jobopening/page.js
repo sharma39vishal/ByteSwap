@@ -37,13 +37,13 @@ export default function JobOpening() {
     <div className="jobopening-outer-box">
       <div className="container">
       <div className="upper-txt">
-           <p>We're Still</p>
+           <p>Were Still</p>
          </div>
          <div className="middle-txt">
            <p>COMING SOON...</p>
          </div>
          <div className="lower-txt">
-           <p>We're going to launch our website very soon. Stay tuned...</p>
+           <p>Were going to launch our website very soon. Stay tuned...</p>
          </div>
         <div className="time-container">
           {timeLeft.days !== undefined && (
