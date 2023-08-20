@@ -53,7 +53,7 @@ router.get('/github/callback', (req, res) => {
             httpOnly: true,
             secure: true,
             sameSite: "none",
-        }).status(200).redirect("http://localhost:3000/");
+        }).status(200).redirect("https://byteswap.vercel.app/");
       }
       else{
         // save a new user account to the db
@@ -89,7 +89,7 @@ router.get('/github/callback', (req, res) => {
             httpOnly: true,
             secure: true,
             sameSite: "none",
-        }).status(200).redirect("/");
+        }).status(200).redirect("https://byteswap.vercel.app/");
       }
       // console.log(req.user._json.name);
       // console.log(req.user._json.email);
