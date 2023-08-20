@@ -79,7 +79,7 @@ export default function Page() {
             <h1 class="title">Sign In</h1>
             <div class="card">
             <div className="social-container">
-                <a href="/auth/google" className="social">
+                <a href="https://byteswap-f4y5.onrender.com/auth/google" className="social">
                 <Image width={"24"} height={"24"} src="/images/google.png" />
                 </a>
                 <a href="https://github.com/login/oauth/authorize?client_id=3d9f7d55ad5a114d9913" className="social">
