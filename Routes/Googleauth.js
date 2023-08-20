@@ -41,7 +41,7 @@ passport.use(
       {
         clientID: process.env.clientID,
         clientSecret: process.env.clientSecret,
-        callbackURL: `/auth/google/callback`,
+        callbackURL: `https://byteswap-f4y5.onrender.com/auth/google/callback`,
       },
       function (accessToken, refreshToken, profile, cb) {
         // Use the profile information to authenticate the user
@@ -61,9 +61,9 @@ passport.use(
 
   router.get("/google",passport.authenticate("google", { scope: ["profile", "email"] }));
   
-  router.get("/google/callback",    passport.authenticate("google", { failureRedirect: "/login" }),
+  router.get("/google/callback", passport.authenticate("google", { failureRedirect: "https://byteswap-f4y5.onrender.com/login" }),
     function (req, res) {
-      res.redirect("/auth/isgoogleauthenticated");
+      res.redirect("https://byteswap-f4y5.onrender.com/auth/isgoogleauthenticated");
     }
   );
   

@@ -55,6 +55,7 @@ router.get('/github/callback', (req, res) => {
             sameSite: "none",
         }).status(200).redirect("https://byteswap.vercel.app/");
       }
+      
       else{
         // save a new user account to the db
         const username=await generateuniqueusername({"username":response.data.login})
