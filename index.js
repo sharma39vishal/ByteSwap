@@ -6,7 +6,17 @@ const cookieParser = require("cookie-parser");
 const PORT = process.env.PORT || 5000;
 const cors = require("cors");
 const isauthenticated = require("./Middleware/isauthenticated")
-
+app.use(cookieParser());
+app.use(cors({
+    origin: [
+      "http://localhost:3000",
+      "https://jobpreppro.netlify.app",
+      "byteswap.netlify.app",
+      "https://byteswap.vercel.app"
+    ],
+    credentials: true,
+  })
+);
 const http = require('http').Server(app);
 const io = require('socket.io')(http
     ,{cors:{"origin":[

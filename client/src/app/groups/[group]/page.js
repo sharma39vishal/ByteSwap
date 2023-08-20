@@ -6,7 +6,7 @@ import RightMessage from './RightMessage';
 import LeftMessage from './LeftMessage';
 import AuthContext from '@/app/Context/authContext';
 // const socket = io.connect();
-const socket = io.connect("http://localhost:5000/");
+const socket = io.connect("https://byteswap-f4y5.onrender.com/");
 
 const Groups = ({params}) => {
   const { UserDetails} = useContext(AuthContext);
