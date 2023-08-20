@@ -3,7 +3,7 @@ import React from 'react'
 export default function Secondsection() {
   return (
     <div className='second-home-section'>
-        <h1>Getting ERROR's</h1>
+        <h1>Getting ERRORs</h1>
         <div className="notifications-container">
   <div className="error-alert">
     <div className="flex">
@@ -24,12 +24,12 @@ export default function Secondsection() {
       </div>
       <div className="error-prompt-container">
         <p className="error-prompt-heading">
-          Your password isn't strong enough
+          Your password isnt strong enough
         </p>
         <div className="error-prompt-wrap">
           <ul className="error-prompt-list" role="list">
-            <li>Password must be at least !8 characters</li>
-            <li>Password must include Elon's baby name</li>
+            <li>Password must be at least 8 characters</li>
+            <li>Password must include Elons baby name</li>
           </ul>
         </div>
       </div>
@@ -37,7 +37,7 @@ export default function Secondsection() {
   </div>
 </div>
     
-    <h3>Let's Change the way to solve it.</h3>
+    <h3>Lets Change the way to solve it.</h3>
     </div>
   )
 }

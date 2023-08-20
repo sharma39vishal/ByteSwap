@@ -8,7 +8,7 @@ export default function Page() {
   const [content, setcontent] = useState([]);
 
   const callapi = async () => {
-    axios.get("/achiver/")
+    axios.get("https://byteswap-f4y5.onrender.com/achiver/")
       .then((res) => {
         setcontent(res.data);
       })

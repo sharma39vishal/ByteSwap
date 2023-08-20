@@ -12,6 +12,7 @@ const io = require('socket.io')(http
     ,{cors:{"origin":[
       "http://localhost:3000",
       "https://jobpreppro.netlify.app",
+      "byteswap.netlify.app"
     ],
     credentials: true,
   }}

@@ -30,7 +30,7 @@ export default function Page({ params }) {
             return;
          }
         //  console.log({params})
-          await axios.post(`/auth/resetpassword/${params.usertoken}`,changepassword)
+          await axios.post(`https://byteswap-f4y5.onrender.com/auth/resetpassword/${params.usertoken}`,changepassword)
           .then((res)=>{alert("Password Changed Successfully")});
         } catch (err) {
           console.error(err);

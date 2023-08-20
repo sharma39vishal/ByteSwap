@@ -49,7 +49,7 @@ export default function Page() {
           alert("Invalid Email");
           return;
         }
-        await axios.post("/auth/register",user)
+        await axios.post("https://byteswap-f4y5.onrender.com/auth/register",user)
         .then((res)=>{ setcall_again_getuser(!call_again_getuser);});
       } catch (err) {
         console.error(err);
@@ -64,7 +64,7 @@ export default function Page() {
             alert("Incomplete Details");
             return;
          }
-        await axios.post("/auth/login",user)
+        await axios.post("https://byteswap-f4y5.onrender.com/auth/login",user)
         .then((res)=>{ setcall_again_getuser(!call_again_getuser);});
       } catch (err) {
         console.error(err);
