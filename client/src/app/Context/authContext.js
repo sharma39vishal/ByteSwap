@@ -8,7 +8,7 @@ function AuthContextProvider(props) {
 const[UserDetails,setUserDetails]=useState(null);
   async function getuser() {
     try {
-    const user_details=await axios.get("https://byteswap-f4y5.onrender.com/auth/isauthentic");
+    const user_details=await axios.get("https://byteswap-f4y5.onrender.com/auth/isauthentic",{withCredentials: true});
     setUserDetails(user_details.data);  
   // console.log("Context : ",user_details.data);
   } catch (err) {

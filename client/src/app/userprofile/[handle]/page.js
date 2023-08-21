@@ -21,7 +21,7 @@ export default function Page({params}) {
   // }, [CurrDetails])
 
   useEffect(async () => {
-    await axios.get(`https://byteswap-f4y5.onrender.com/profile/${params.handle}`)
+    await axios.get(`https://byteswap-f4y5.onrender.com/profile/${params.handle}`,{withCredentials: true})
     .then((res)=>{setCurrDetails(res.data)});
   }, [])
   

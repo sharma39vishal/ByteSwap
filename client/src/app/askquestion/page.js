@@ -57,7 +57,7 @@ async function addquestion() {
         alert("Fill Complete Details")
         return
       }
-    await axios.post("https://byteswap-f4y5.onrender.com/discuss/adddiscussion",question)
+    await axios.post("https://byteswap-f4y5.onrender.com/discuss/adddiscussion",question,{withCredentials: true})
     .then((res)=>{alert("Question Added Successfully"); window.location.reload()});
   } catch (err) {
     console.error(err);

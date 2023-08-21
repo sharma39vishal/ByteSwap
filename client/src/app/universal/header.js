@@ -16,7 +16,7 @@ export default function Header() {
   const [avatardropdown, setavatardropdown] = useState(false);
 
   const logout = async () => {
-    await axios.get("https://byteswap-f4y5.onrender.com/auth/logout").then(() => { window.location.reload(); })
+    await axios.get("https://byteswap-f4y5.onrender.com/auth/logout",{withCredentials: true}).then(() => { window.location.reload(); })
   }
 
   const handleShowNavbar = () => {
