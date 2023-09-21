@@ -2,7 +2,7 @@
 import React, { useContext, useState } from 'react'
 import './Roadmap.css'
 import AuthContext from '../Context/authContext';
-
+import axios from 'axios';
 export default function Page() {
   const { UserDetails,call_again_getuser,setcall_again_getuser} = useContext(AuthContext);
   const [ question, setquestion] = useState({
@@ -42,6 +42,9 @@ async function addquestion() {
         question.tags.push(singletag);
         singletag="";
       }
+      
+      // console.log("ALL TAGS ",question.tags)
+
       
       
       if(!UserDetails){

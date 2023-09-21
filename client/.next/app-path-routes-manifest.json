@@ -1,0 +1,20 @@
+{
+  "/favicon.ico/route": "/favicon.ico",
+  "/page": "/",
+  "/achievers/page": "/achievers",
+  "/askquestion/page": "/askquestion",
+  "/developers/page": "/developers",
+  "/changepassword/page": "/changepassword",
+  "/discussion/page": "/discussion",
+  "/forgetpassword/page": "/forgetpassword",
+  "/groups/page": "/groups",
+  "/jobopening/page": "/jobopening",
+  "/signin/page": "/signin",
+  "/practice/page": "/practice",
+  "/achievers/[ReadMore]/page": "/achievers/[ReadMore]",
+  "/discussion/[discuss]/page": "/discussion/[discuss]",
+  "/groups/[group]/page": "/groups/[group]",
+  "/practice/[question]/page": "/practice/[question]",
+  "/resetpassword/[usertoken]/page": "/resetpassword/[usertoken]",
+  "/userprofile/[handle]/page": "/userprofile/[handle]"
+}
