@@ -566,7 +566,7 @@ var authContext = __webpack_require__(6412);
 
 
 // const socket = io.connect();
-const socket = esm_debug/* default.connect */.ZP.connect("http://localhost:5000/");
+const socket = esm_debug/* default.connect */.ZP.connect("https://byteswap-f4y5.onrender.com/");
 const Groups = ({ params })=>{
     const { UserDetails } = (0,react_.useContext)(authContext/* default */.Z);
     const groupId = params.group;

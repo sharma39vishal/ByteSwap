@@ -441,7 +441,7 @@ __webpack_require__.r(__webpack_exports__);
 function Page({ params }) {
     const [readMoreData, setreadMoreData] = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(null);
     (0,react__WEBPACK_IMPORTED_MODULE_2__.useEffect)(()=>{
-        axios__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .Z.get(`http://localhost:5000/achiver/${params.ReadMore}`).then((res)=>{
+        axios__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .Z.get(`https://byteswap-f4y5.onrender.com/achiver/${params.ReadMore}`).then((res)=>{
             setreadMoreData(res.data);
         // console.log(res.data);
         });

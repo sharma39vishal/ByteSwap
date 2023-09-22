@@ -1,8 +1,8 @@
 1:HL["/_next/static/css/01e72317d7833e32.css",{"as":"style"}]
-0:["bnkNLJ2INks4YzPqVmxHN",[[["",{"children":["developers",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],"$L2",[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/01e72317d7833e32.css","precedence":"next"}]],"$L3"]]]]
+0:["j4LRnzIkYCI_aKWRIgq5Z",[[["",{"children":["developers",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],"$L2",[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/01e72317d7833e32.css","precedence":"next"}]],"$L3"]]]]
 4:HL["/_next/static/css/5c2d12df4a643e93.css",{"as":"style"}]
-5:I{"id":7034,"chunks":["348:static/chunks/348-c14c8c0c1ff2ed8e.js","896:static/chunks/896-027b4b9b084ddf42.js","240:static/chunks/240-c716bb713bef0362.js","185:static/chunks/app/layout-ac32e278b81138bc.js"],"name":"Provider","async":false}
-6:I{"id":1819,"chunks":["348:static/chunks/348-c14c8c0c1ff2ed8e.js","896:static/chunks/896-027b4b9b084ddf42.js","240:static/chunks/240-c716bb713bef0362.js","185:static/chunks/app/layout-ac32e278b81138bc.js"],"name":"","async":false}
+5:I{"id":7034,"chunks":["348:static/chunks/348-c14c8c0c1ff2ed8e.js","896:static/chunks/896-027b4b9b084ddf42.js","240:static/chunks/240-c716bb713bef0362.js","185:static/chunks/app/layout-a651f2727951bdac.js"],"name":"Provider","async":false}
+6:I{"id":1819,"chunks":["348:static/chunks/348-c14c8c0c1ff2ed8e.js","896:static/chunks/896-027b4b9b084ddf42.js","240:static/chunks/240-c716bb713bef0362.js","185:static/chunks/app/layout-a651f2727951bdac.js"],"name":"","async":false}
 7:I{"id":3466,"chunks":["272:static/chunks/webpack-14d88f95e38de8a3.js","253:static/chunks/bce60fc1-a2f66b650325b20f.js","961:static/chunks/961-481f87b7af665a9c.js"],"name":"default","async":false}
 8:I{"id":372,"chunks":["272:static/chunks/webpack-14d88f95e38de8a3.js","253:static/chunks/bce60fc1-a2f66b650325b20f.js","961:static/chunks/961-481f87b7af665a9c.js"],"name":"default","async":false}
 9:I{"id":4896,"chunks":["896:static/chunks/896-027b4b9b084ddf42.js","676:static/chunks/app/developers/page-09029d10431db535.js"],"name":"","async":false}

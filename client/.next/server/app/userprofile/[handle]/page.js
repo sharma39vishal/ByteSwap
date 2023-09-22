@@ -453,7 +453,7 @@ var deleteaccount = __webpack_require__(4145);
 function DeleteAccount({ delacc, setdelacc }) {
     const callapi = async ()=>{
         console.log("API Call");
-        await axios/* default */.Z.get("http://localhost:5000/profile/deleteaccount", {
+        await axios/* default */.Z.get("https://byteswap-f4y5.onrender.com/profile/deleteaccount", {
             withCredentials: true
         }).then((res)=>{
             alert("Account was successfuly deactivated");
@@ -544,7 +544,7 @@ function Page({ params }) {
     // console.log(CurrDetails)
     // }, [CurrDetails])
     (0,react_.useEffect)(async ()=>{
-        await axios/* default */.Z.get(`http://localhost:5000/profile/${params.handle}`, {
+        await axios/* default */.Z.get(`https://byteswap-f4y5.onrender.com/profile/${params.handle}`, {
             withCredentials: true
         }).then((res)=>{
             setCurrDetails(res.data);

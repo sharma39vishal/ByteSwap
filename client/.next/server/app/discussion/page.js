@@ -481,7 +481,7 @@ function Page() {
     const router = (0,navigation.useRouter)();
     const [content, setcontent] = (0,react_.useState)([]);
     const callapi = async ()=>{
-        axios/* default */.Z.get("http://localhost:5000/discuss/").then((res)=>{
+        axios/* default */.Z.get("https://byteswap-f4y5.onrender.com/discuss/").then((res)=>{
             setcontent(res.data);
             console.log("Discussion :", res.data);
         }).catch((err)=>{

@@ -477,7 +477,7 @@ function Page() {
                 alert("Invalid Email");
                 return;
             }
-            await axios__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z.post("http://localhost:5000/auth/register", user, {
+            await axios__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z.post("https://byteswap-f4y5.onrender.com/auth/register", user, {
                 withCredentials: true
             }).then((res)=>{
                 setcall_again_getuser(!call_again_getuser);
@@ -494,7 +494,7 @@ function Page() {
                 alert("Incomplete Details");
                 return;
             }
-            await axios__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z.post("http://localhost:5000/auth/login", user, {
+            await axios__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z.post("https://byteswap-f4y5.onrender.com/auth/login", user, {
                 withCredentials: true
             }).then((res)=>{
                 setcall_again_getuser(!call_again_getuser);
@@ -520,7 +520,7 @@ function Page() {
                             className: "social-container",
                             children: [
                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("a", {
-                                    href: "http://localhost:5000/auth/google",
+                                    href: "https://byteswap-f4y5.onrender.com/auth/google",
                                     className: "social",
                                     children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_4___default()), {
                                         width: "24",

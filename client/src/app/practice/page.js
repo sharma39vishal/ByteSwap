@@ -14,7 +14,7 @@ export default function Page() {
   const router=useRouter();
   const [content, setcontent] = useState([]);
   const callapi = async () => {
-    axios.get("http://localhost:5000/questions/")
+    axios.get("https://byteswap-f4y5.onrender.com/questions/")
       .then((res) => {
         setcontent(res.data);
         console.log("QUESTION :", res.data);

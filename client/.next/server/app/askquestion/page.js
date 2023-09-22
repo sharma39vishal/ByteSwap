@@ -477,7 +477,7 @@ function Page() {
                 alert("Fill Complete Details");
                 return;
             }
-            await axios__WEBPACK_IMPORTED_MODULE_4__/* ["default"] */ .Z.post("http://localhost:5000/discuss/adddiscussion", question, {
+            await axios__WEBPACK_IMPORTED_MODULE_4__/* ["default"] */ .Z.post("https://byteswap-f4y5.onrender.com/discuss/adddiscussion", question, {
                 withCredentials: true
             }).then((res)=>{
                 alert("Question Added Successfully");

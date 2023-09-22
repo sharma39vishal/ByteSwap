@@ -440,7 +440,7 @@ __webpack_require__.r(__webpack_exports__);
 function Page({ params }) {
     const [content, setcontent] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)([]);
     (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(()=>{
-        axios__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .Z.get(`http://localhost:5000/questions/${params.question}`).then((res)=>{
+        axios__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .Z.get(`https://byteswap-f4y5.onrender.com/questions/${params.question}`).then((res)=>{
             setcontent(res.data);
             console.log("SINGLE QUESTION", res.data);
         });

@@ -6,7 +6,7 @@ import './QuestionOne.css'
 export default function Page({ params }) {
   const [content, setcontent] = useState([]);
   useEffect(() => {
-    axios.get(`http://localhost:5000/questions/${params.question}`)
+    axios.get(`https://byteswap-f4y5.onrender.com/questions/${params.question}`)
       .then((res) => {
         setcontent(res.data);
         console.log("SINGLE QUESTION", res.data);

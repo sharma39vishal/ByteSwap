@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-const newurl="http://localhost:5000";
+const newurl="https://byteswap-f4y5.onrender.com";
 // const newurl="https://jobpreppro-backend.onrender.com";
 
 const nextConfig = {
