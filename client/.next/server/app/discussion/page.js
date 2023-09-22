@@ -481,7 +481,7 @@ function Page() {
     const router = (0,navigation.useRouter)();
     const [content, setcontent] = (0,react_.useState)([]);
     const callapi = async ()=>{
-        axios/* default */.Z.get("https://byteswap-f4y5.onrender.com/discuss/").then((res)=>{
+        axios/* default */.Z.get("http://localhost:5000/discuss/").then((res)=>{
             setcontent(res.data);
             console.log("Discussion :", res.data);
         }).catch((err)=>{
@@ -501,11 +501,11 @@ function Page() {
                     textAlign: "end"
                 },
                 children: /*#__PURE__*/ jsx_runtime_.jsx("button", {
-                    className: "add-query-button",
+                    className: "add-query-button-que",
                     onClick: ()=>{
                         router.push(`/askquestion`);
                     },
-                    children: "Ask Question"
+                    children: "ASK Question"
                 })
             }),
             /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
@@ -517,31 +517,53 @@ function Page() {
                         },
                         children: "Discussion Questions"
                     }),
-                    content.map((item, index)=>{
-                        return /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                            className: "singlediscuss",
-                            style: {
-                                cursor: "pointer"
-                            },
-                            onClick: ()=>{
-                                router.push(`/discussion/${item._id}`);
-                            },
-                            children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("h3", {
-                                className: "title-one1",
+                    /*#__PURE__*/ jsx_runtime_.jsx("br", {}),
+                    /*#__PURE__*/ jsx_runtime_.jsx("br", {}),
+                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)("table", {
+                        class: "w3-table",
+                        children: [
+                            /*#__PURE__*/ (0,jsx_runtime_.jsxs)("tr", {
                                 children: [
-                                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)("p", {
-                                        children: [
-                                            ++index,
-                                            ". ",
-                                            item.Title
-                                        ]
+                                    /*#__PURE__*/ jsx_runtime_.jsx("th", {
+                                        children: "S No."
                                     }),
-                                    /*#__PURE__*/ jsx_runtime_.jsx("p", {
-                                        children: item.tags[0]
+                                    /*#__PURE__*/ jsx_runtime_.jsx("th", {
+                                        children: "Title"
+                                    }),
+                                    /*#__PURE__*/ jsx_runtime_.jsx("th", {
+                                        children: "Tags"
                                     })
                                 ]
+                            }),
+                            content.map((item, index)=>{
+                                return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("tr", {
+                                    style: {
+                                        cursor: "pointer"
+                                    },
+                                    onClick: ()=>{
+                                        router.push(`/discussion/${item._id}`);
+                                    },
+                                    children: [
+                                        /*#__PURE__*/ jsx_runtime_.jsx("td", {
+                                            children: ++index
+                                        }),
+                                        /*#__PURE__*/ jsx_runtime_.jsx("td", {
+                                            children: item.Title
+                                        }),
+                                        /*#__PURE__*/ jsx_runtime_.jsx("td", {
+                                            children: item.tags.map((singletags)=>{
+                                                return /*#__PURE__*/ (0,jsx_runtime_.jsxs)(jsx_runtime_.Fragment, {
+                                                    children: [
+                                                        singletags,
+                                                        " "
+                                                    ]
+                                                });
+                                            })
+                                        })
+                                    ]
+                                }, index);
                             })
-                        }, index);
+                        ]
                     })
                 ]
             })

@@ -517,7 +517,7 @@ var axios = __webpack_require__(248);
 function Page() {
     const [content, setcontent] = (0,react_.useState)([]);
     const callapi = async ()=>{
-        axios/* default */.Z.get("https://byteswap-f4y5.onrender.com/achiver/").then((res)=>{
+        axios/* default */.Z.get("http://localhost:5000/achiver/").then((res)=>{
             setcontent(res.data);
         }).catch((err)=>{
             console.log(err);

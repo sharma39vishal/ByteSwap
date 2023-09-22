@@ -6,7 +6,7 @@ import axios from 'axios'
 export default function Page({params}){
   const [content, setcontent] = useState([]);
     useEffect(() => {
-        axios.get(`https://byteswap-f4y5.onrender.com/discuss/${params.discuss}`)
+        axios.get(`http://localhost:5000/discuss/${params.discuss}`)
         .then((res) => {
           setcontent(res.data);
           console.log("SINGLE DISCUSSION",res.data);

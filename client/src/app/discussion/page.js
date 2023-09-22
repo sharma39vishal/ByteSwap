@@ -10,7 +10,7 @@ export default function Page() {
   const router=useRouter();
   const [content, setcontent] = useState([]);
   const callapi = async () => {
-    axios.get("https://byteswap-f4y5.onrender.com/discuss/")
+    axios.get("http://localhost:5000/discuss/")
       .then((res) => {
         setcontent(res.data);
         console.log("Discussion :", res.data);
@@ -43,15 +43,32 @@ export default function Page() {
 
       {/* Section 2 Discussion Page */}
       <h1 className='ask-discussion' style={{textAlign:"end"}}>
-        <button className='add-query-button' onClick={()=>{router.push(`/askquestion`)}}>Ask Question</button>
+        <button className='add-query-button-que' onClick={()=>{router.push(`/askquestion`)}}>ASK Question</button>
       </h1>
       <div className="discussion-section-2-container">
       <h1 style={{textAlign:"center"}}>Discussion Questions</h1>
+      <br/>
+      <br/>
+      <table class="w3-table">
+  <tr>
+    <th>S No.</th>
+    <th>Title</th>
+    <th>Tags</th>
+  </tr>
             {content.map((item,index)=>{
-              return  (<div className='singlediscuss' key={index} style={{cursor:"pointer"}} onClick={()=>{router.push(`/discussion/${item._id}`)}}>
-              <h3 className='title-one1'><p>{++index}. {item.Title}</p><p>{item.tags[0]}</p></h3>
-          </div>)
+              return  (
+          <tr key={index} style={{cursor:"pointer"}} onClick={()=>{router.push(`/discussion/${item._id}`)}}>
+          <td>{++index}</td>
+          <td>{item.Title}</td>
+          <td>
+            {item.tags.map((singletags)=>{
+              return <>{singletags} </>
             })}
+            </td>
+        </tr>
+          )
+            })}
+      </table>
       </div>
     </div>
   )

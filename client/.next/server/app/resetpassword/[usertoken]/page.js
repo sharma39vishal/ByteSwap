@@ -463,7 +463,7 @@ function Page({ params }) {
                 return;
             }
             //  console.log({params})
-            await axios__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .Z.post(`https://byteswap-f4y5.onrender.com/auth/resetpassword/${params.usertoken}`, changepassword, {
+            await axios__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .Z.post(`http://localhost:5000/auth/resetpassword/${params.usertoken}`, changepassword, {
                 withCredentials: true
             }).then((res)=>{
                 alert("Password Changed Successfully");

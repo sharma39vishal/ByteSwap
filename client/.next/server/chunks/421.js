@@ -42,7 +42,7 @@ function AuthContextProvider(props) {
     const [UserDetails, setUserDetails] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(null);
     async function getuser() {
         try {
-            const user_details = await axios__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z.get("https://byteswap-f4y5.onrender.com/auth/isauthentic", {
+            const user_details = await axios__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z.get("http://localhost:5000/auth/isauthentic", {
                 withCredentials: true
             });
             setUserDetails(user_details.data);
@@ -133,7 +133,7 @@ function Header() {
     // console.log(UserDetails);
     const [avatardropdown, setavatardropdown] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false);
     const logout = async ()=>{
-        await axios__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z.get("https://byteswap-f4y5.onrender.com/auth/logout", {
+        await axios__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z.get("http://localhost:5000/auth/logout", {
             withCredentials: true
         }).then(()=>{
             window.location.reload();
