@@ -25,6 +25,7 @@
 }
 
 .nav-elements {
+  z-index: 1000000000000;
 }
 
 .nav-elements ul {

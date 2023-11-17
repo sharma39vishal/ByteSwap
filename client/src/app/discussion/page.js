@@ -7,7 +7,7 @@ import { useRouter } from 'next/navigation';
 
 
 export default function Page() {
-  const router=useRouter();
+  const router = useRouter();
   const [content, setcontent] = useState([]);
   const callapi = async () => {
     axios.get("https://byteswap-f4y5.onrender.com/discuss/")
@@ -24,52 +24,51 @@ export default function Page() {
   }, [])
   const [image, setimage] = useState('/images/dbmsDiscuss.png');
   return (
-    <div className='discussion-main'>
-      {/* <div className="discussion-section-1-container">
-        <h1 style={{color:"#0288D1",margin:"1em 4em 0em 4em"}}>Click below links to join Live Discussion</h1>
-        <div className="live-single-discuss-container">
-          <div className='discussion-description'>
-            <SingleLiveDiscuss image={image} setimage={setimage} discussDescription='Database_Management_System' discussImage='\images\dbmsDiscuss.png' />
-            <SingleLiveDiscuss image={image} setimage={setimage} discussDescription='Data_Structure_And_Algo.' discussImage='\images\dsa-discuss.jpg' />
-            <SingleLiveDiscuss image={image} setimage={setimage} discussDescription='Computer_Networks' discussImage='\images\networkDiscuss.png' />
-            <SingleLiveDiscuss image={image} setimage={setimage} discussDescription='Operating_Systems' discussImage='\images\OsDiscuss.jpg' />
-            <SingleLiveDiscuss image={image} setimage={setimage} discussDescription='Object_Oriented_Programming' discussImage='\images\discussOops.png' />
-          </div>
-          <div className="live-discussion-image">
-            <img src={image} alt="Loading Error" />
-          </div>
-        </div>
-      </div> */}
+    <div className='flex justify-center items-center flex-col h-screen '>
+      <h1 className='text-2xl text-gray-200 font-semibold m-2 uppercase '>Discussion</h1>
+      <button className='absolute right-14 z-0 top-16 p-2 m-1 bg-blue-900 rounded-md ' onClick={() => { router.push(`/askquestion`) }}>ASK Question</button>
 
-      {/* Section 2 Discussion Page */}
-      <h1 className='ask-discussion' style={{textAlign:"end"}}>
-        <button className='add-query-button-que' onClick={()=>{router.push(`/askquestion`)}}>ASK Question</button>
-      </h1>
-      <div className="discussion-section-2-container">
-      <h1 style={{textAlign:"center"}}>Discussion Questions</h1>
-      <br/>
-      <br/>
-      <table class="w3-table">
-  <tr>
-    <th>S No.</th>
-    <th>Title</th>
-    <th>Tags</th>
-  </tr>
-            {content.map((item,index)=>{
-              return  (
-          <tr key={index} style={{cursor:"pointer"}} onClick={()=>{router.push(`/discussion/${item._id}`)}}>
-          <td>{++index}</td>
-          <td>{item.Title}</td>
-          <td>
-            {item.tags.map((singletags)=>{
-              return <>{singletags} </>
+      <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+        <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+          <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+              <th scope="col" class="px-6 py-3">
+                S No.
+              </th>
+              <th scope="col" class="px-6 py-3">
+                Name
+              </th>
+              <th scope="col" class="px-6 py-3">
+                Category
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {content.map((item, index) => {
+              return (
+                <tr key={index} style={{ cursor: "pointer" }} onClick={() => { router.push(`/discussion/${item._id}`) }} class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    {++index}
+                  </th>
+                  <td class="px-6 py-4">
+                    {item.Title}
+                  </td>
+                  <td class="px-6 py-4">
+                    {item.tags.map((singletags) => {
+                      return <>{singletags} </>
+                    })}
+                  </td>
+                </tr>
+              )
             })}
-            </td>
-        </tr>
-          )
-            })}
-      </table>
+
+          </tbody>
+        </table>
       </div>
+
+
+
+
     </div>
   )
 }

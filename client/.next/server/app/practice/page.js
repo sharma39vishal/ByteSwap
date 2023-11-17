@@ -564,74 +564,110 @@ function Page() {
     (0,react_.useEffect)(()=>{
         callapi();
     }, []);
-    return /*#__PURE__*/ jsx_runtime_.jsx("div", {
-        className: "practice-main",
-        children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-            className: "discussion-section-2-container",
-            children: [
-                /*#__PURE__*/ jsx_runtime_.jsx("h1", {
-                    style: {
-                        textAlign: "center"
-                    },
-                    children: "Questions"
-                }),
-                /*#__PURE__*/ jsx_runtime_.jsx("br", {}),
-                /*#__PURE__*/ jsx_runtime_.jsx("br", {}),
-                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("table", {
-                    class: "w3-table",
-                    style: {
-                        width: "40%"
-                    },
+    return(//   <div className='practice-main'>
+    //     <div className="discussion-section-2-container">
+    //     <h1 style={{textAlign:"center"}}>Questions</h1>
+    //     <br/>
+    //     <br/>
+    //     <table class="w3-table" style={{width:"40%"}}>
+    // <tr>
+    //   <th>S No.</th>
+    //   <th>Title</th>
+    //   <th>Tags</th>
+    // </tr>
+    //           {content.map((item,index)=>{
+    //             return  (
+    //         //     <div className='singlediscuss' onClick={()=>{router.push(`/practice/${item._id}`)}} key={index} style={{cursor:"pointer"}}>
+    //         //     <h3 className='title-one1'><p>{++index}. {item.Title}</p><p>{item.tags[0]}</p></h3>
+    //         // </div> 
+    //         <tr key={index} style={{cursor:"pointer"}} onClick={()=>{router.push(`/discussion/${item._id}`)}}>
+    //         <td>{++index}</td>
+    //         <td>{item.Title}</td>
+    //         <td>
+    //           {item.tags.map((singletags)=>{
+    //             return <>{singletags} </>
+    //           })}
+    //           </td>
+    //       </tr>
+    //         )
+    //           })}
+    //     </table>
+    //     </div>
+    //   </div>
+    /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+        className: "flex justify-center items-center flex-col h-screen ",
+        children: [
+            /*#__PURE__*/ jsx_runtime_.jsx("h1", {
+                className: "text-2xl text-gray-200 font-semibold m-2 uppercase ",
+                children: "Practice Question"
+            }),
+            /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                class: "relative overflow-x-auto shadow-md sm:rounded-lg",
+                children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("table", {
+                    class: "w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400",
                     children: [
-                        /*#__PURE__*/ (0,jsx_runtime_.jsxs)("tr", {
-                            children: [
-                                /*#__PURE__*/ jsx_runtime_.jsx("th", {
-                                    children: "S No."
-                                }),
-                                /*#__PURE__*/ jsx_runtime_.jsx("th", {
-                                    children: "Title"
-                                }),
-                                /*#__PURE__*/ jsx_runtime_.jsx("th", {
-                                    children: "Tags"
-                                })
-                            ]
-                        }),
-                        content.map((item, index)=>{
-                            return(//     <div className='singlediscuss' onClick={()=>{router.push(`/practice/${item._id}`)}} key={index} style={{cursor:"pointer"}}>
-                            //     <h3 className='title-one1'><p>{++index}. {item.Title}</p><p>{item.tags[0]}</p></h3>
-                            // </div> 
-                            /*#__PURE__*/ (0,jsx_runtime_.jsxs)("tr", {
-                                style: {
-                                    cursor: "pointer"
-                                },
-                                onClick: ()=>{
-                                    router.push(`/discussion/${item._id}`);
-                                },
+                        /*#__PURE__*/ jsx_runtime_.jsx("thead", {
+                            class: "text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400",
+                            children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("tr", {
                                 children: [
-                                    /*#__PURE__*/ jsx_runtime_.jsx("td", {
-                                        children: ++index
+                                    /*#__PURE__*/ jsx_runtime_.jsx("th", {
+                                        scope: "col",
+                                        class: "px-6 py-3",
+                                        children: "S No."
                                     }),
-                                    /*#__PURE__*/ jsx_runtime_.jsx("td", {
-                                        children: item.Title
+                                    /*#__PURE__*/ jsx_runtime_.jsx("th", {
+                                        scope: "col",
+                                        class: "px-6 py-3",
+                                        children: "Name"
                                     }),
-                                    /*#__PURE__*/ jsx_runtime_.jsx("td", {
-                                        children: item.tags.map((singletags)=>{
-                                            return /*#__PURE__*/ (0,jsx_runtime_.jsxs)(jsx_runtime_.Fragment, {
-                                                children: [
-                                                    singletags,
-                                                    " "
-                                                ]
-                                            });
-                                        })
+                                    /*#__PURE__*/ jsx_runtime_.jsx("th", {
+                                        scope: "col",
+                                        class: "px-6 py-3",
+                                        children: "Category"
                                     })
                                 ]
-                            }, index));
+                            })
+                        }),
+                        /*#__PURE__*/ jsx_runtime_.jsx("tbody", {
+                            children: content.map((item, index)=>{
+                                return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("tr", {
+                                    style: {
+                                        cursor: "pointer"
+                                    },
+                                    onClick: ()=>{
+                                        router.push(`/practice/${item._id}`);
+                                    },
+                                    class: "odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700",
+                                    children: [
+                                        /*#__PURE__*/ jsx_runtime_.jsx("th", {
+                                            scope: "row",
+                                            class: "px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white",
+                                            children: ++index
+                                        }),
+                                        /*#__PURE__*/ jsx_runtime_.jsx("td", {
+                                            class: "px-6 py-4",
+                                            children: item.Title
+                                        }),
+                                        /*#__PURE__*/ jsx_runtime_.jsx("td", {
+                                            class: "px-6 py-4",
+                                            children: item.tags.map((singletags)=>{
+                                                return /*#__PURE__*/ (0,jsx_runtime_.jsxs)(jsx_runtime_.Fragment, {
+                                                    children: [
+                                                        singletags,
+                                                        " "
+                                                    ]
+                                                });
+                                            })
+                                        })
+                                    ]
+                                }, index);
+                            })
                         })
                     ]
                 })
-            ]
-        })
-    });
+            })
+        ]
+    }));
 }
 
 
@@ -706,7 +742,7 @@ module.exports = __webpack_require__(7376)
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [669,686,421], () => (__webpack_exec__(1463)));
+var __webpack_exports__ = __webpack_require__.X(0, [669,686,134], () => (__webpack_exec__(1463)));
 module.exports = __webpack_exports__;
 
 })();

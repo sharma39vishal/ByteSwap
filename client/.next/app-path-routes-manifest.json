@@ -4,17 +4,17 @@
   "/achievers/page": "/achievers",
   "/askquestion/page": "/askquestion",
   "/changepassword/page": "/changepassword",
-  "/developers/page": "/developers",
   "/discussion/page": "/discussion",
-  "/forgetpassword/page": "/forgetpassword",
+  "/developers/page": "/developers",
   "/groups/page": "/groups",
-  "/jobopening/page": "/jobopening",
+  "/forgetpassword/page": "/forgetpassword",
   "/practice/page": "/practice",
+  "/jobopening/page": "/jobopening",
   "/signin/page": "/signin",
   "/discussion/[discuss]/page": "/discussion/[discuss]",
   "/achievers/[ReadMore]/page": "/achievers/[ReadMore]",
-  "/groups/[group]/page": "/groups/[group]",
   "/practice/[question]/page": "/practice/[question]",
-  "/resetpassword/[usertoken]/page": "/resetpassword/[usertoken]",
-  "/userprofile/[handle]/page": "/userprofile/[handle]"
+  "/groups/[group]/page": "/groups/[group]",
+  "/userprofile/[handle]/page": "/userprofile/[handle]",
+  "/resetpassword/[usertoken]/page": "/resetpassword/[usertoken]"
 }

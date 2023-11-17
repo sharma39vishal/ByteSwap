@@ -493,49 +493,48 @@ function Page() {
     }, []);
     const [image, setimage] = (0,react_.useState)("/images/dbmsDiscuss.png");
     return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-        className: "discussion-main",
+        className: "flex justify-center items-center flex-col h-screen ",
         children: [
             /*#__PURE__*/ jsx_runtime_.jsx("h1", {
-                className: "ask-discussion",
-                style: {
-                    textAlign: "end"
-                },
-                children: /*#__PURE__*/ jsx_runtime_.jsx("button", {
-                    className: "add-query-button-que",
-                    onClick: ()=>{
-                        router.push(`/askquestion`);
-                    },
-                    children: "ASK Question"
-                })
+                className: "text-2xl text-gray-200 font-semibold m-2 uppercase ",
+                children: "Discussion"
             }),
-            /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-                className: "discussion-section-2-container",
-                children: [
-                    /*#__PURE__*/ jsx_runtime_.jsx("h1", {
-                        style: {
-                            textAlign: "center"
-                        },
-                        children: "Discussion Questions"
-                    }),
-                    /*#__PURE__*/ jsx_runtime_.jsx("br", {}),
-                    /*#__PURE__*/ jsx_runtime_.jsx("br", {}),
-                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)("table", {
-                        class: "w3-table",
-                        children: [
-                            /*#__PURE__*/ (0,jsx_runtime_.jsxs)("tr", {
+            /*#__PURE__*/ jsx_runtime_.jsx("button", {
+                className: "absolute right-14 z-0 top-16 p-2 m-1 bg-blue-900 rounded-md ",
+                onClick: ()=>{
+                    router.push(`/askquestion`);
+                },
+                children: "ASK Question"
+            }),
+            /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                class: "relative overflow-x-auto shadow-md sm:rounded-lg",
+                children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("table", {
+                    class: "w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400",
+                    children: [
+                        /*#__PURE__*/ jsx_runtime_.jsx("thead", {
+                            class: "text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400",
+                            children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("tr", {
                                 children: [
                                     /*#__PURE__*/ jsx_runtime_.jsx("th", {
+                                        scope: "col",
+                                        class: "px-6 py-3",
                                         children: "S No."
                                     }),
                                     /*#__PURE__*/ jsx_runtime_.jsx("th", {
-                                        children: "Title"
+                                        scope: "col",
+                                        class: "px-6 py-3",
+                                        children: "Name"
                                     }),
                                     /*#__PURE__*/ jsx_runtime_.jsx("th", {
-                                        children: "Tags"
+                                        scope: "col",
+                                        class: "px-6 py-3",
+                                        children: "Category"
                                     })
                                 ]
-                            }),
-                            content.map((item, index)=>{
+                            })
+                        }),
+                        /*#__PURE__*/ jsx_runtime_.jsx("tbody", {
+                            children: content.map((item, index)=>{
                                 return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("tr", {
                                     style: {
                                         cursor: "pointer"
@@ -543,14 +542,19 @@ function Page() {
                                     onClick: ()=>{
                                         router.push(`/discussion/${item._id}`);
                                     },
+                                    class: "odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700",
                                     children: [
-                                        /*#__PURE__*/ jsx_runtime_.jsx("td", {
+                                        /*#__PURE__*/ jsx_runtime_.jsx("th", {
+                                            scope: "row",
+                                            class: "px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white",
                                             children: ++index
                                         }),
                                         /*#__PURE__*/ jsx_runtime_.jsx("td", {
+                                            class: "px-6 py-4",
                                             children: item.Title
                                         }),
                                         /*#__PURE__*/ jsx_runtime_.jsx("td", {
+                                            class: "px-6 py-4",
                                             children: item.tags.map((singletags)=>{
                                                 return /*#__PURE__*/ (0,jsx_runtime_.jsxs)(jsx_runtime_.Fragment, {
                                                     children: [
@@ -563,9 +567,9 @@ function Page() {
                                     ]
                                 }, index);
                             })
-                        ]
-                    })
-                ]
+                        })
+                    ]
+                })
             })
         ]
     });
@@ -622,7 +626,7 @@ module.exports = __webpack_require__(7376)
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [669,686,421], () => (__webpack_exec__(8480)));
+var __webpack_exports__ = __webpack_require__.X(0, [669,686,134], () => (__webpack_exec__(8480)));
 module.exports = __webpack_exports__;
 
 })();
