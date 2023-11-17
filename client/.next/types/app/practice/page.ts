@@ -1,4 +1,4 @@
-// File: D:\My Projects\ByteSwap\frontend\app\practice\page.js
+// File: D:\My Projects\ByteSwap\client\app\practice\page.js
 import * as entry from '../../../../app/practice/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

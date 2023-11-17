@@ -1,7 +1,21 @@
 {
-  "/not-found": "app/not-found.js",
-  "/page": "app/page.js",
+  "/_not-found": "app/_not-found.js",
+  "/achievers/[ReadMore]/page": "app/achievers/[ReadMore]/page.js",
+  "/achievers/page": "app/achievers/page.js",
+  "/askquestion/page": "app/askquestion/page.js",
+  "/changepassword/page": "app/changepassword/page.js",
+  "/developers/page": "app/developers/page.js",
+  "/discussion/[discuss]/page": "app/discussion/[discuss]/page.js",
   "/discussion/page": "app/discussion/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/practice/page": "app/practice/page.js"
+  "/forgetpassword/page": "app/forgetpassword/page.js",
+  "/groups/[group]/page": "app/groups/[group]/page.js",
+  "/groups/page": "app/groups/page.js",
+  "/jobopening/page": "app/jobopening/page.js",
+  "/practice/[question]/page": "app/practice/[question]/page.js",
+  "/page": "app/page.js",
+  "/practice/page": "app/practice/page.js",
+  "/resetpassword/[usertoken]/page": "app/resetpassword/[usertoken]/page.js",
+  "/userprofile/[handle]/page": "app/userprofile/[handle]/page.js",
+  "/signin/page": "app/signin/page.js"
 }
