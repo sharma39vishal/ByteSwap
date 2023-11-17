@@ -22,7 +22,7 @@ export default function Page() {
 
   return (
     <div className='achievers-main'>
-      <div className="achievers-section-1-container">
+      <div class="grid mb-8 border border-gray-200  shadow-sm dark:border-gray-700 md:mb-12 md:grid-cols-2 bg-white dark:bg-gray-800">
         {content.map((item,index) => {
           return <SingleAchiever key={index} achiever_image={item.images}
             achiever_name={item.name} achiver_designation={item.designation}
