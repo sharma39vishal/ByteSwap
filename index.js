@@ -60,6 +60,10 @@ mongoose.set('strictQuery', false)
 mongoose.connect(process.env.MDB_CONNECT) 
 .then(()=>{console.log('Mongodb connected')});
 
+app.get("/apis", (req, res) => {
+  res.send("Hello World");
+});
+
 // set up routes
 app.use("/auth", require("./Routes/Authentication"));
 app.use("/discuss", require("./Routes/DiscussionRoutes"));
