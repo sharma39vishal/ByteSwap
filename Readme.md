@@ -1,4 +1,4 @@
-# Randomizer
+# ByteSwap
 
 ## About
 
