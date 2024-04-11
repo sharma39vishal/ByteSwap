@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
-const newurl="https://byteswap-f4y5.onrender.com";
-// const newurl="https://jobpreppro-backend.onrender.com";
+const newurl="https://byte-swap-backend-git-master-sharma39vishalgmailcoms-projects.vercel.app/";
 
 const nextConfig = {
   images: {
