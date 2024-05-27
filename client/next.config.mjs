@@ -5,8 +5,8 @@ const nextConfig = {
     return [
       {
         source: '/api/:path*',
-        destination: 'http://localhost:5000/api/:path*',
-        // destination: 'https://byteswap-f4y5.onrender.com/:path*',
+        // destination: 'http://localhost:5000/api/:path*',
+        destination: 'https://byteswap-f4y5.onrender.com/:path*',
       },
     ]
   },
