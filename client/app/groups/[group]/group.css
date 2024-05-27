@@ -144,6 +144,7 @@
   .msger-input {
     flex: 1;
     background: #ddd;
+    color: 'black';
   }
   .msger-send-btn {
     margin-left: 10px;

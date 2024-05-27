@@ -6,7 +6,7 @@ import RightMessage from './RightMessage';
 import LeftMessage from './LeftMessage';
 import AuthContext from '@/app/Context/authContext';
 // const socket = io.connect();
-const socket = io.connect("https://byteswap-f4y5.onrender.com/");
+const socket = io.connect("http://localhost:5000/");
 
 const Groups = ({params}) => {
   const { UserDetails} = useContext(AuthContext);
@@ -20,7 +20,7 @@ const Groups = ({params}) => {
   
   useEffect(() => {
     socket.on('message', (data) => {
-      console.log(data)
+      // console.log(data)
       setMessages((prevMessages) => [...prevMessages, data]);
     });
     return () => {
@@ -74,7 +74,7 @@ const Groups = ({params}) => {
   </main>
   </div>
   <form class="msger-inputarea" onSubmit={handleSubmit}>
-  <input type="text" class="msger-input" value={message} onChange={handleInputChange} />
+  <input type="text" class="msger-input" style={{color:"black"}} value={message} onChange={handleInputChange} />
         <button class="msger-send-btn" type="submit">Send</button>
   </form>
 </section>

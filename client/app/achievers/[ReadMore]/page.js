@@ -7,7 +7,7 @@ import React, { useEffect, useState } from 'react'
 export default function Page({ params }) {
   const [readMoreData, setreadMoreData] = useState(null);
   useEffect(() => {
-    axios.get(`https://byteswap-f4y5.onrender.com/achiver/${params.ReadMore}`)
+    axios.get(`/api/achiver/${params.ReadMore}`)
       .then((res) => {
         setreadMoreData(res.data);
         // console.log(res.data);

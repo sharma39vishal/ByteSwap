@@ -7,7 +7,7 @@ export default function DeleteAccount({delacc,setdelacc}) {
   
   const callapi = async () => {
     console.log("API Call")
-    await axios.get("https://byteswap-f4y5.onrender.com/profile/deleteaccount",{withCredentials: true})
+    await axios.get("/api/profile/deleteaccount",{withCredentials: true})
     .then((res)=>{
       alert("Account was successfuly deactivated");
       window.location.reload();

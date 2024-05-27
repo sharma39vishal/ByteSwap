@@ -34,6 +34,7 @@ const io = require('socket.io')(http
   
     // console.log(socket.id)
     socket.on('message', (data) => {
+      // console.log(data);
       io.to(data.room).emit('message', data);
     });
   
@@ -61,12 +62,12 @@ app.get("/apis", (req, res) => {
 });
 
 // set up routes
-app.use("/auth", require("./Routes/Authentication"));
-app.use("/discuss", require("./Routes/DiscussionRoutes"));
-app.use("/questions", require("./Routes/QuestionRoutes"));
-app.use("/achiver", require("./Routes/AchiversRoutes"));
-app.use("/profile",require("./Routes/UserProfile"));
-app.use("/logs",isauthenticated,require("./Routes/LogsRouter"));
+app.use("/api/auth", require("./Routes/Authentication"));
+app.use("/api/discuss", require("./Routes/DiscussionRoutes"));
+app.use("/api/questions", require("./Routes/QuestionRoutes"));
+app.use("/api/achiver", require("./Routes/AchiversRoutes"));
+app.use("/api/profile",require("./Routes/UserProfile"));
+app.use("/api/logs",isauthenticated,require("./Routes/LogsRouter"));
 
 // app.listen(PORT, err => {
 //   if (err) throw err;

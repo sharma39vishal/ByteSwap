@@ -1,7 +1,15 @@
 /** @type {import('next').NextConfig} */
-const newurl="https://byte-swap-backend-git-master-sharma39vishalgmailcoms-projects.vercel.app/";
 
 const nextConfig = {
+  async rewrites() {
+    return [
+      {
+        source: '/api/:path*',
+        destination: 'http://localhost:5000/api/:path*',
+        // destination: 'https://byteswap-f4y5.onrender.com/:path*',
+      },
+    ]
+  },
   images: {
     domains: ['firebasestorage.googleapis.com'],
   },
